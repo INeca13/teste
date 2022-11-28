@@ -1,0 +1,23 @@
+# List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
+tasks:
+  - name: Terminal 1
+  - init: echo 'init script' # runs during prebuild
+    command: echo 'start script'
+  - name: Terminal 2
+  - init: pip install pandas
+  - init: pip3 install paho-mqtt python-etcd
+  - init: pip install matplotlib
+  - init: pip install streamlit
+  - init: pip install mpld3
+  - init: sudo apt-get install libsndfile1
+  - init: pip install librosa
+  - name: terminal 3
+  - init: echo 'Teste'
+
+
+# List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
+ports:
+  - name: Web App
+    description: The main application web server
+    port: 8501
+    onOpen: open-browser
